@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NonAdminHomeController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="deleteBtn" layoutX="508.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="22.0" prefWidth="74.0" text="Delete" />
+            <Button fx:id="addAlbum" layoutX="509.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleAddAlbum" text="Add Album" />
+            <ListView fx:id="albumList" layoutX="24.0" layoutY="59.0" prefHeight="266.0" prefWidth="479.0" />
+            <Button fx:id="renameBtn" layoutX="509.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleRename" prefHeight="22.0" prefWidth="73.0" text="rename" />
+            <TextField fx:id="tag" layoutX="24.0" layoutY="20.0" prefHeight="22.0" prefWidth="141.0" />
+            <Text layoutX="24.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="173.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="315.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Button layoutX="522.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleSearch" text="search" />
+            <DatePicker fx:id="toDate" layoutX="315.0" layoutY="20.0" prefHeight="22.0" prefWidth="132.0" />
+            <DatePicker fx:id="fromDate" layoutX="173.0" layoutY="20.0" prefHeight="22.0" prefWidth="132.0" />
+            <Button layoutX="461.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleReset" text="reset" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <Pane prefHeight="57.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="30.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Album list">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Button fx:id="logout" layoutX="524.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleLogout" text="logout" />
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
